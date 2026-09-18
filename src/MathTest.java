@@ -64,7 +64,7 @@ public class MathTest {
             "-7.4, -8.3, -9.2"
     })
     public void testMultiplying(double base, double a, double b) {
-        Assertions.assertEquals(Math.pow(base,a) * Math.pow(base, b), Math.pow(base, (a+b)), 1E-9);
+        Assertions.assertEquals(Math.pow(base,a) * Math.pow(base, b), Math.pow(base, (a+b)));
 
         //xa * xb = xa+b
     }
@@ -84,7 +84,7 @@ public class MathTest {
             "-7.4, -8.3, -9.2"
     })
     public void testDividing(double base, double a, double b) {
-        Assertions.assertEquals( (Math.pow(base, a)/Math.pow(base, b)),Math.pow(base, (a-b)), 1E-9);
+        Assertions.assertEquals( (Math.pow(base, a)/Math.pow(base, b)),Math.pow(base, (a-b)));
         //xa / xb = xa-b
     }
     @ParameterizedTest
@@ -103,7 +103,7 @@ public class MathTest {
             "-7.4, -8.3, -9.2"
     })
     public void testNestedPowers(double base, double a, double b) {
-        Assertions.assertEquals(Math.pow((Math.pow(base,a)),b),Math.pow(base, (a*b)), 1E-9);
+        Assertions.assertEquals(Math.pow((Math.pow(base,a)),b),Math.pow(base, (a*b)));
 
         //(xa)b = xa*b
     }
@@ -121,7 +121,7 @@ public class MathTest {
     @ParameterizedTest
     @ValueSource(doubles = {1, 5.0, 3.7, -1, -4.0, -4.9})
     public void testOnePower(double base) {
-
+        Assertions.assertEquals(Math.pow(base, 1), base);
         //x1 = x
     }
 
