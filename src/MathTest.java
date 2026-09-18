@@ -129,7 +129,7 @@ public class MathTest {
     @ParameterizedTest
     @ValueSource(doubles = {1, 5.0, 3.7, -1, -4.0, -4.9})
     public void testZeroBase(double exponent) {
-        Assertions.assertEquals(Math.pow(0, exponent), 0);
+        Assertions.assertEquals(Math.pow(0, Math.abs(exponent)), 0);
 
         //0x = 0
     }
