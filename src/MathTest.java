@@ -112,21 +112,26 @@ public class MathTest {
     @ParameterizedTest
     @ValueSource(doubles = {1, 5.0, 3.7, -1, -4.0, -4.9})
     public void testZeroPower(double base) {
-        x0 = 1
+        Assertions.assertEquals(Math.pow(base, 0), 1);
+
+        //x0 = 1
     }
 
 
     @ParameterizedTest
     @ValueSource(doubles = {1, 5.0, 3.7, -1, -4.0, -4.9})
     public void testOnePower(double base) {
-        x1 = x
+
+        //x1 = x
     }
 
 
     @ParameterizedTest
     @ValueSource(doubles = {1, 5.0, 3.7, -1, -4.0, -4.9})
     public void testZeroBase(double exponent) {
-        0x = 0
+
+
+        //0x = 0
     }
 
 
