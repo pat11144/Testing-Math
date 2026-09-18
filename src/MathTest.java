@@ -103,7 +103,9 @@ public class MathTest {
             "-7.4, -8.3, -9.2"
     })
     public void testNestedPowers(double base, double a, double b) {
-        (xa)b = xa*b
+        Assertions.assertEquals(Math.pow((Math.pow(base,a)),b),Math.pow(base, (a*b)), 1E-9);
+
+        //(xa)b = xa*b
     }
 
 
